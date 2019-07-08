@@ -27,7 +27,8 @@
     "reactify": "^0.14.0",
     "tape": "~2.14.0",
     "underscore": "~1.7.0",
-    "weevil": "~0.1.2"
+    "weevil": "~0.1.2",
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "autoprefixer": "^3.0.0",
@@ -38,8 +39,11 @@
   },
   "scripts": {
     "build": "make build",
-    "start": "building-static-server -p 3050"
+    "start": "building-static-server -p 3050",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
